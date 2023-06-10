@@ -1,8 +1,10 @@
-import { insertRec, readRec } from "./utility.js";
+import express from "express";
 
-function main() {
-    let inputDoc = {message:"Day11-Insert find"};
-    insertRec(inputDoc);
+const app = express();
+
+function main(req, res) {
+    res.send("Hello Bhai");
 }
 
-main();
+app.get("/main",main);
+app.listen(4000);
